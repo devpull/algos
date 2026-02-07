@@ -13,15 +13,11 @@ function bubbleSort(data) {
       if (left === undefined) {
         break;
       }
-      console.log(`left: ${left} - right: ${right}`);
 
       if (left > right) {
-        console.log('Swapping!');
-        swap(data, (i - 1), i);
+        swap(data, i - 1, i);
         swapped = true;
       }
-
-      console.log(data);
     }
   } while (swapped);
   return data;
@@ -32,7 +28,6 @@ function cleanBubbleSort(data) {
 
   do {
     swapped = false;
-    console.log(data);
     data.forEach((item, index) => {
       if (item > data[index + 1]) {
         swap(data, index, index + 1);
@@ -45,5 +40,5 @@ function cleanBubbleSort(data) {
 
 module.exports = {
   bubbleSort,
-  cleanBubbleSort
-}
+  cleanBubbleSort,
+};

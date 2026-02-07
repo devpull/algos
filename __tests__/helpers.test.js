@@ -7,5 +7,6 @@ test('return min index from array', () => {
 });
 
 test('swap array items positons', () => {
-  expect(swap(someData, 0, 1)).toEqual([7, 10, 9, 3, 2]);
+  swap(someData, 0, 1);
+  expect(someData).toEqual([7, 10, 9, 3, 2]);
 });
